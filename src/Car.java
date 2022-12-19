@@ -6,7 +6,7 @@ public class Car {
     public int year;
     public String country;
 
-    public Car(String brand, double engineVolume) {
+    public Car(String brand, double engineVolume)  {
         this.brand = brand;
         model = "default";
         country = "default";

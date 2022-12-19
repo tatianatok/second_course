@@ -39,6 +39,5 @@ public class Main {
         hyundai.year = 2016;
         hyundai.country = "Южная Корея";
         hyundai.car();
-
     }
 }
