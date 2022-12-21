@@ -1,43 +1,70 @@
+import transport.Car;
+
 public class Main {
     public static void main(String[] args) {
-        Car lada = new Car("Lada", - 1.7);
-        lada.model = "Granta";
-        //lada.engineVolume = 1.7;
-        //lada.color = "желтый";
-        lada.year = 2015;
-        lada.country = "Россия";
-        lada.car();
+        Car lada = new Car(
+                "Lada",
+                "Granta",
+                1.7,
+                "желтый",
+                2015,
+                "Россия",
+                null,
+                null);
 
-        Car audi = new Car("Audi", 0);
-        audi.model = "A8 50 L TDI quattro";
-        audi.engineVolume = 3.0;
-        audi.color = "черный";
-        //audi.year = 2020;
-        //audi.country = "Германия";
-        audi.car();
+        Car audi = new Car(
+                "Audi",
+                "A8 50 L TDI quattro",
+                3.0,
+                "черный",
+                2020,
+                "Германия",
+                null,
+                null);
 
-        Car bmw = new Car();
-        //bmw.model = "Z8";
-        bmw.engineVolume = 3.0;
-        bmw.color = "черный";
-        bmw.year = 2021;
-        bmw.country = "Германия";
-        bmw.car();
+        Car bmw = new Car(
+                "BMW",
+                "Z8",
+                3.0,
+                "черный",
+                2021,
+                "Германия",
+                null,
+                null);
 
-        Car kia = new Car("Kia");
-        kia.model = "Sportage 4-го поколения";
-        kia.engineVolume = 2.4;
-        kia.color = "красный";
-        kia.year = 2018;
-        kia.country = "Южная Корея";
-        kia.car();
+        Car kia = new Car(
+                "Kia",
+                "Sportage 4-го поколения",
+                2.4,
+                "черный",
+                2018,
+                "Южная Корея",
+                null,
+                null);
 
-        Car hyundai = new Car("Hyundai");
-        hyundai.model = "Avante";
-        hyundai.engineVolume = 1.6;
-        hyundai.color = "оранжевый";
-        hyundai.year = 2016;
-        hyundai.country = "Южная Корея";
-        hyundai.car();
+        Car hyundai = new Car(
+                "Hyundai",
+                "Avante",
+                1.6,
+                "оранжевый",
+                2016,
+                "Южная Корея",
+                null,
+                null);
+
+
+    printIhfo(lada);
+    printIhfo(audi);
+    printIhfo(bmw);
+    printIhfo(kia);
+    printIhfo(hyundai);
+    }
+    private static void printIhfo (Car car){
+        System.out.println(
+                car.getBrand() + " " + car.getModel() +
+                        " , год выпуска: " + car.getYear() +
+                        " , страна сборки: " + car.getCountry() +
+                        " , цвет кузова: " + car.getColor() +
+                        " , объем двигателя: " + car.getEngineVolume() );
     }
 }
