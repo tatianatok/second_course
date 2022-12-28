@@ -1,11 +1,6 @@
 package Transport;
 
 public abstract class Transport implements Competing {
-    //public static String ACT_REF = "Заправка топливом";
-   // public static String ACT_CHANG = "Смена шин, смена водителей";
-    //public static String ACT_CHECK = "Проверка технического состояния машины";
-
-    //public static final String[] Actions = {ACT_REF, ACT_CHANG, ACT_CHECK};
 
     private String brand;
     private String model;

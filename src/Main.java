@@ -134,7 +134,6 @@ public class Main {
                         ", объем двигателя: " + bus.getEngineVolume());
 
     }
-
     private static void printIhfo(Truck truck) {
         System.out.println(
                 truck.getBrand() + " " + truck.getModel() +

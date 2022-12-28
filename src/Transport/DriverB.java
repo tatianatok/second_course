@@ -29,7 +29,6 @@ public class DriverB<A extends Car> extends Driver{
         this.car = car;
     }
 
-
     @Override
     public void driverStartMove() {
         System.out.println("Начать движение на автомобиле");
