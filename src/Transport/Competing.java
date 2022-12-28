@@ -1,3 +1,4 @@
+
 package Transport;
 public interface Competing {
     void getPitStop();

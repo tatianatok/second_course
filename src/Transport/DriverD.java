@@ -1,3 +1,4 @@
+
 package Transport;
 
 public class DriverD<C extends Truck> extends Driver{
@@ -42,4 +43,3 @@ public class DriverD<C extends Truck> extends Driver{
         System.out.println("Заправить автобус");
     }
 }
-

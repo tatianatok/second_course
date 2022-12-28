@@ -1,3 +1,4 @@
+
 package Transport;
 
 import java.util.Objects;
@@ -6,9 +7,9 @@ public class Truck extends Transport {
     private String kind;
 
     public Truck(String brand,
-               String model,
-               String kind,
-               double engineVolume) {
+                 String model,
+                 String kind,
+                 double engineVolume) {
         super(brand, model, engineVolume);
         this.kind = kind;
     }

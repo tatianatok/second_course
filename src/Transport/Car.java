@@ -1,3 +1,4 @@
+
 package Transport;
 import java.util.Objects;
 public class Car extends Transport {
@@ -14,9 +15,9 @@ public class Car extends Transport {
         return bodyType;
     }
 
-   @Override
-   public void getPitStop() {
-       System.out.println("Машина на пит-стоп!");
+    @Override
+    public void getPitStop() {
+        System.out.println("Машина на пит-стоп!");
     }
 
     @Override

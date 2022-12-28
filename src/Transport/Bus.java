@@ -1,3 +1,4 @@
+
 package Transport;
 
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class Bus extends Transport {
                 double engineVolume) {
         super(brand, model, engineVolume);
         this.type = type;
-        }
+    }
 
     public String getType() {
         return type;
