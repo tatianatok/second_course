@@ -4,3 +4,4 @@ public interface Competing {
     void getBestTimeCircle();
     void getMaxSpeed();
 }
+

@@ -42,3 +42,4 @@ public class DriverC<B extends Truck> extends Driver{
         System.out.println("Заправить грузовик");
     }
 }
+

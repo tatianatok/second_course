@@ -59,3 +59,4 @@ public class Truck extends Transport {
         return Objects.hash(kind);
     }
 }
+
