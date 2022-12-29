@@ -1,17 +1,19 @@
-
 package Transport;
 
 import java.util.Objects;
 
-public abstract class Driver {
+public abstract class Driver<A> {
     private String name;
     private int experience;
+    private A transport;
 
     public Driver(String name,
-                  int experience) {
+                  int experience,
+                  A transport) {
         this.name = name;
         this.experience = experience;
-    }
+        this.transport = transport;
+        }
 
     public abstract void driverStartMove();
     public abstract void driverStopMove();

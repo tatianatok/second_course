@@ -75,38 +75,38 @@ public class Main {
                 "Самосвал",
                 17.2);
 
-        DriverB A = new DriverB(
-                "A",
+        DriverB ivanov = new DriverB(
+                "Иванов И.И.",
                 "B",
                 10,
-                "легковой автомобиль");
+                audi);
 
-        DriverB B = new DriverB(
-                "B",
+        DriverC petrov = new DriverC(
+                "Петров П.П.",
                 "C",
                 8,
-                "грузовик");
+                faw);
 
-        DriverD C = new DriverD(
-                "C",
+        DriverD sidorov = new DriverD(
+                "Сидоров С.С.",
                 "D",
                 15,
-                "автобус");
+                higer);
 
-        printIhfo(audi);
-        printIhfo(bmw);
-        printIhfo(kia);
-        printIhfo(hyundai);
+        System.out.println(audi);
+        System.out.println(bmw);
+        System.out.println(kia);
+        System.out.println(hyundai);
 
-        printIhfo(higer);
-        printIhfo(volvo);
-        printIhfo(paz);
-        printIhfo(mercedes);
+        System.out.println(higer);
+        System.out.println(volvo);
+        System.out.println(paz);
+        System.out.println(mercedes);
 
-        printIhfo(renault);
-        printIhfo(mercedesBenz);
-        printIhfo(scania);
-        printIhfo(faw);
+        System.out.println(renault);
+        System.out.println(mercedesBenz);
+        System.out.println(scania);
+        System.out.println(faw);
 
         audi.startMove();
         mercedes.stopMove();
@@ -116,46 +116,10 @@ public class Main {
         mercedesBenz.getBestTimeCircle();
         higer.getMaxSpeed();
 
-        printIhfo(A);
-        printIhfo(B);
-        printIhfo(C);
-    }
+        System.out.println(ivanov);
+        System.out.println(petrov);
+        System.out.println(sidorov);
 
-    private static void printIhfo(Car car) {
-        System.out.println(
-                car.getBrand() + " " + car.getModel() +
-                        ", тип кузова: " + car.getBodyType() +
-                        ", объем двигателя: " + car.getEngineVolume());
-    }
-
-    private static void printIhfo(Bus bus) {
-        System.out.println(
-                bus.getBrand() + " " + bus.getModel() +
-                        ", вид автобуса: " + bus.getType() +
-                        ", объем двигателя: " + bus.getEngineVolume());
-
-    }
-    private static void printIhfo(Truck truck) {
-        System.out.println(
-                truck.getBrand() + " " + truck.getModel() +
-                        ", тип грузовика: " + truck.getKind() +
-                        ", объем двигателя: " + truck.getEngineVolume());
-
-    }
-
-    private static void printIhfo(DriverB driverB) {
-        System.out.println("Водитель " + driverB.getName() + " управляет " + driverB.getCar() +
-                " и будет участвовать в заезде");
-    }
-
-    private static void printIhfo(DriverC driverC) {
-        System.out.println("Водитель " + driverC.getName() + " управляет " + driverC.getCar() +
-                " и будет участвовать в заезде");
-    }
-
-    private static void printIhfo(DriverD driverD) {
-        System.out.println("Водитель " + driverD.getName() + " управляет " + driverD.getCar() +
-                " и будет участвовать в заезде");
     }
 }
 

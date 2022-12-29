@@ -16,6 +16,13 @@ public class Car extends Transport {
     }
 
     @Override
+    public String toString () {
+        return getBrand() + " " + getModel() +
+        ", тип кузова: " + getBodyType() +
+                ", объем двигателя: " + getEngineVolume();
+    }
+
+    @Override
     public void getPitStop() {
         System.out.println("Машина на пит-стоп!");
     }

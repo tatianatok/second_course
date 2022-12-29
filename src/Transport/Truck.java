@@ -23,6 +23,13 @@ public class Truck extends Transport {
     }
 
     @Override
+    public String toString () {
+        return getBrand() + " " + getModel() +
+                ", тип грузовика: " + getKind() +
+                ", объем двигателя: " + getEngineVolume();
+    }
+
+    @Override
     public void startMove() {
         System.out.println("Грузовик начал движение!");
     }

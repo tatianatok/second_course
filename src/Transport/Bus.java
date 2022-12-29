@@ -23,6 +23,13 @@ public class Bus extends Transport {
     }
 
     @Override
+    public String toString () {
+        return getBrand() + " " + getModel() +
+                ", вид автобуса: " + getType() +
+                ", объем двигателя: " + getEngineVolume();
+    }
+
+    @Override
     public void startMove() {
         System.out.println("Автобус начал движение!");
     }

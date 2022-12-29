@@ -1,17 +1,12 @@
-
 package Transport;
-
-public class DriverB<A extends Car> extends Driver{
+public class DriverB extends Driver<Car>{
     private String driverLicense;
-    private String car;
-
-    public DriverB (String name,
-                    String driverLicense,
-                    int experience,
-                    String car) {
-        super(name, experience);
+    public DriverB(String name,
+                   String driverLicense,
+                   int experience,
+                   Car transport) {
+        super(name, experience, transport);
         this.driverLicense = driverLicense;
-        this.car = car;
     }
 
     public String getDriverLicense() {
@@ -21,13 +16,8 @@ public class DriverB<A extends Car> extends Driver{
     public void setDriverLicense(String driverLicense) {
         this.driverLicense = driverLicense;
     }
-
-    public String getCar() {
-        return car;
-    }
-
-    public void setCar(String car) {
-        this.car = car;
+    private String getTransport() {
+        return "легковым автомобилем";
     }
 
     @Override
@@ -41,6 +31,11 @@ public class DriverB<A extends Car> extends Driver{
     @Override
     public  void refuelAuto(){
         System.out.println("Заправить автомобиль");
+    }
+    @Override
+    public String toString (){
+        return "Водитель " + getName() + " управляет " + getTransport() +
+                " и будет участвовать в заезде";
     }
 }
 
