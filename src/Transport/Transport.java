@@ -36,6 +36,7 @@ public abstract class Transport implements Competing {
     public String getBrand() {
         return brand;
     }
+    public abstract void printType();
 
     public abstract void getPitStop();
     public abstract void getBestTimeCircle();

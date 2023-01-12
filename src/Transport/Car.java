@@ -1,25 +1,53 @@
-
 package Transport;
 import java.util.Objects;
-public class Car extends Transport {
-    private final String bodyType;
-    public Car (String brand,
-                String model,
-                double engineVolume,
-                String bodyType) {
+
+public final class Car extends Transport {
+    private BodyType type;
+
+    public Car(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
-        this.bodyType = bodyType;
     }
 
-    public String getBodyType() {
-        return bodyType;
+    public enum BodyType {
+        SEDAN("Седан"),
+        HATCHBACK("Хэтчбэк"),
+        COUPE("Купе"),
+        STATION_WAGON("Универсал"),
+        SUV("Внедорожник"),
+        CROSSOVER("Кроссовер"),
+        PICKUP("Пикап"),
+        VAN("Фургон"),
+        MINIVAN("Минивэн");
+
+        private final String BODY_TYPE;
+
+        BodyType(String body_type) {
+            this.BODY_TYPE = body_type;
+        }
+    }
+
+    public BodyType getType() {
+        return type;
+    }
+
+    public void setType(BodyType type) {
+        this.type = type;
+    }
+
+    @Override
+    public void printType() {
+        if (type == null) {
+            System.out.println("Данных по транспортному средству недостаточно.");
+        } else {
+            System.out.println("Тип кузова автомобиля: " + getType());
+        }
     }
 
     @Override
     public String toString () {
         return getBrand() + " " + getModel() +
-        ", тип кузова: " + getBodyType() +
-                ", объем двигателя: " + getEngineVolume();
+                " , тип кузова: " + getType() +
+               ", объем двигателя: " + getEngineVolume();
     }
 
     @Override
@@ -45,18 +73,6 @@ public class Car extends Transport {
     @Override
     public void stopMove() {
         System.out.println("Автомобиль закончил движение!");
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
-        return Objects.equals(bodyType, car.bodyType);
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(bodyType);
     }
 }
 

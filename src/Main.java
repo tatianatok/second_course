@@ -1,4 +1,3 @@
-
 import Transport.*;
 
 public class Main {
@@ -6,73 +5,61 @@ public class Main {
         Car audi = new Car(
                 "Audi",
                 "A8 50 L TDI quattro",
-                2,
-                "седан");
+                2);
 
         Car bmw = new Car(
                 "BMW",
                 "Z8",
-                4.5,
-                "родстер");
+                4.5);
 
         Car kia = new Car(
                 "Kia",
                 "Sportage 4-го поколения",
-                2,
-                "кроссовер");
+                2);
 
         Car hyundai = new Car(
                 "Hyundai",
                 "Avante",
-                1.8,
-                "седан");
+                1.8);
 
         Bus higer = new Bus(
                 "Higer",
                 "KLQ6106X",
-                "школьный",
                 6.7);
 
         Bus volvo = new Bus(
                 "Volvo",
                 "9700",
-                "туристский",
                 8.8);
 
         Bus paz = new Bus(
                 "ПАЗ",
                 "320402-05",
-                "служебный",
                 4.5);
 
         Bus mercedes = new Bus(
                 "Mercedes-Benz",
                 "Intouro",
-                "междугородний",
                 7.2);
 
         Truck renault = new Truck(
                 "Renault",
                 "Trucks T",
-                "тягач",
                 10.5);
 
         Truck mercedesBenz = new Truck(
                 "Mercedes-Benz",
                 "Actros 1845 LSnRL",
-                "тягач",
                 12.8);
 
         Truck scania = new Truck(
                 "SCANIA",
                 "P380 B6X4HZ",
-                "Самосвал",
                 15);
 
         Truck faw = new Truck(
                 "FAW",
                 "J6 6Х4 EURO5",
-                "Самосвал",
                 17.2);
 
         DriverB ivanov = new DriverB(
@@ -119,6 +106,9 @@ public class Main {
         System.out.println(ivanov);
         System.out.println(petrov);
         System.out.println(sidorov);
+
+        bmw.setType(Car.BodyType.SEDAN);
+        bmw.printType();
 
     }
 }
