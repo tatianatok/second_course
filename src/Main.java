@@ -64,21 +64,21 @@ public class Main {
 
         DriverB ivanov = new DriverB(
                 "Иванов И.И.",
-                "B",
                 10,
-                audi);
+                audi,
+               "B");
 
         DriverC petrov = new DriverC(
                 "Петров П.П.",
-                "C",
                 8,
-                faw);
+                faw,
+                "C");
 
         DriverD sidorov = new DriverD(
                 "Сидоров С.С.",
-                "D",
                 15,
-                higer);
+                higer,
+                "D");
 
         System.out.println(audi);
         System.out.println(bmw);
@@ -109,6 +109,8 @@ public class Main {
 
         bmw.setType(Car.BodyType.SEDAN);
         bmw.printType();
+        audi.checkTransport();
+        higer.checkTransport();
 
     }
 }

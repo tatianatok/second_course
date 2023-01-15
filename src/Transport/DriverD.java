@@ -1,22 +1,11 @@
 package Transport;
 
-public class DriverD extends Driver<Bus>{
-    private String driverLicense;
-    public DriverD (String name,
-                    String driverLicense,
-                    int experience,
-                    Bus transport) {
-        super(name, experience, transport);
-        this.driverLicense = driverLicense;
-    }
-
-    public String getDriverLicense() {
-        return driverLicense;
-    }
-
-    public void setDriverLicense(String driverLicense) {
-        this.driverLicense = driverLicense;
-    }
+public class DriverD extends Driver<Bus> {
+    public DriverD(String name,
+                   int experience,
+                   Bus transport,
+                   String category) {
+        super(name, experience, transport, category);}
 
     private String getTransport() {
         return "автобусом";
@@ -37,7 +26,7 @@ public class DriverD extends Driver<Bus>{
 
     @Override
     public String toString (){
-        return "Водитель " + getName() + " управляет " + getTransport() +
-                " и будет участвовать в заезде";
+        return "Водитель " + getName() + " управляет " + getTransport() + ", стаж " + getExperience() + " лет, " +
+                "категория прав " + getCategory() + " и будет участвовать в заезде";
     }
 }

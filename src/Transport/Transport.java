@@ -33,6 +33,8 @@ public abstract class Transport implements Competing {
 
     public abstract void stopMove();
 
+    public abstract void checkTransport();
+
     public String getBrand() {
         return brand;
     }
@@ -41,6 +43,8 @@ public abstract class Transport implements Competing {
     public abstract void getPitStop();
     public abstract void getBestTimeCircle();
     public abstract void getMaxSpeed();
+
+
 
 
     public void setBrand(String brand) {

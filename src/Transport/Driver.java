@@ -6,14 +6,30 @@ public abstract class Driver<A> {
     private String name;
     private int experience;
     private A transport;
+    private String category;
 
-    public Driver(String name,
-                  int experience,
-                  A transport) {
-        this.name = name;
-        this.experience = experience;
-        this.transport = transport;
-        }
+     public Driver (String name,
+                       int experience,
+                       A transport,
+                       String category) {
+            this.name = name;
+            this.experience = experience;
+            this.transport = transport;
+
+                if (category != null && !category.isEmpty()) {
+                    this.category = category;
+                } else {
+                    throw new Exeptions("Тип прав указан неверно");
+                }
+            }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public abstract void driverStartMove();
     public abstract void driverStopMove();
@@ -25,6 +41,10 @@ public abstract class Driver<A> {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getExperience() {
+        return experience;
     }
 
     @Override

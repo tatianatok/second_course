@@ -74,6 +74,11 @@ public final class Car extends Transport {
     public void stopMove() {
         System.out.println("Автомобиль закончил движение!");
     }
+
+    @Override
+    public void checkTransport() {
+        System.out.println(getBrand() + getModel() + " проходит диагностику");
+    }
 }
 
 
