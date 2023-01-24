@@ -1,4 +1,6 @@
 package Transport;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public final class Car extends Transport {
@@ -35,6 +37,16 @@ public final class Car extends Transport {
     }
 
     @Override
+    public void addAutoQueue (){
+        System.out.println(getBrand() + getModel() + " встает в очередь на ТО");
+        }
+
+    @Override
+    public void makeTO(){
+        System.out.println(getBrand() + getModel() + " провести ТО");
+    }
+
+    @Override
     public void printType() {
         if (type == null) {
             System.out.println("Данных по транспортному средству недостаточно.");
@@ -46,7 +58,7 @@ public final class Car extends Transport {
     @Override
     public String toString () {
         return getBrand() + " " + getModel() +
-                " , тип кузова: " + getType() +
+                ", тип кузова: " + getType() +
                ", объем двигателя: " + getEngineVolume();
     }
 

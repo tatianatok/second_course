@@ -1,7 +1,12 @@
 import Transport.*;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class Main {
-    public static void main(String[] args) {
+       public static void main(String[] args) {
         Car audi = new Car(
                 "Audi",
                 "A8 50 L TDI quattro",
@@ -80,6 +85,42 @@ public class Main {
                 higer,
                 "D");
 
+        Mechanics first = new Mechanics(
+                "Механик 1",
+                "Компания 1");
+
+        Mechanics second = new Mechanics(
+                "Механик 2",
+                "Компания 2");
+
+        Mechanics third = new Mechanics(
+                 "Механик 3",
+                 "Компания 3");
+
+        List<Transport> transportList = new ArrayList<>();
+        transportList.add(audi);
+        transportList.add(bmw);
+        transportList.add(kia);
+        transportList.add(hyundai);
+        transportList.add(volvo);
+        transportList.add(paz);
+        transportList.add(mercedes);
+        transportList.add(higer);
+        transportList.add(renault);
+        transportList.add(mercedesBenz);
+        transportList.add(scania);
+        transportList.add(faw);
+
+        Queue<Transport> queue = new LinkedList<Transport>();
+        queue.add(audi);
+        queue.add(bmw);
+        queue.add(kia);
+        queue.add(hyundai);
+        queue.add(renault);
+        queue.add(mercedesBenz);
+        queue.add(scania);
+        queue.add(faw);
+
         System.out.println(audi);
         System.out.println(bmw);
         System.out.println(kia);
@@ -103,6 +144,10 @@ public class Main {
         mercedesBenz.getBestTimeCircle();
         higer.getMaxSpeed();
 
+        audi.addAutoQueue();
+        faw.makeTO();
+        higer.makeTO();
+
         System.out.println(ivanov);
         System.out.println(petrov);
         System.out.println(sidorov);
@@ -110,8 +155,11 @@ public class Main {
         bmw.setType(Car.BodyType.SEDAN);
         bmw.printType();
         audi.checkTransport();
-        higer.checkTransport();
+        //higer.checkTransport();
 
+        third.makeMaintenance(audi);
+        first.repairTransport(mercedesBenz);
+        second.repairTransport(transportList.get(5));
     }
 }
 

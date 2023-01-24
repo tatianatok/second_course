@@ -1,10 +1,13 @@
-
 package Transport;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Transport implements Competing {
     private String brand;
     private String model;
     private double engineVolume;
+
+    private Driver driver;
 
     public Transport(String brand,
                      String model,
@@ -28,12 +31,17 @@ public abstract class Transport implements Competing {
             this.engineVolume = engineVolume;
         }
     }
-
     public abstract void startMove();
 
     public abstract void stopMove();
 
     public abstract void checkTransport();
+
+    List<Mechanics> mechanicsList = new ArrayList<>();
+
+    public abstract void addAutoQueue();
+
+    public abstract void makeTO();
 
     public String getBrand() {
         return brand;
@@ -43,9 +51,6 @@ public abstract class Transport implements Competing {
     public abstract void getPitStop();
     public abstract void getBestTimeCircle();
     public abstract void getMaxSpeed();
-
-
-
 
     public void setBrand(String brand) {
         this.brand = brand;

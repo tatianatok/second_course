@@ -47,6 +47,16 @@ public class Bus extends Transport {
     }
 
     @Override
+    public void addAutoQueue(){
+        System.out.println( "Автобусы не встают в очередь на ТО, т.к. не проходят диагностику");
+    }
+
+    @Override
+    public void makeTO(){
+        System.out.println("Автобусы не проходят ТО");
+    }
+
+    @Override
     public void printType() {
         if (type == null) {
             System.out.println("Данных по транспортному средству недостаточно.");
