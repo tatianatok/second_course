@@ -1,9 +1,7 @@
 import Transport.*;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 public class Main {
        public static void main(String[] args) {
@@ -111,16 +109,6 @@ public class Main {
         transportList.add(scania);
         transportList.add(faw);
 
-        Queue<Transport> queue = new LinkedList<Transport>();
-        queue.add(audi);
-        queue.add(bmw);
-        queue.add(kia);
-        queue.add(hyundai);
-        queue.add(renault);
-        queue.add(mercedesBenz);
-        queue.add(scania);
-        queue.add(faw);
-
         System.out.println(audi);
         System.out.println(bmw);
         System.out.println(kia);
@@ -144,9 +132,32 @@ public class Main {
         mercedesBenz.getBestTimeCircle();
         higer.getMaxSpeed();
 
-        audi.addAutoQueue();
-        faw.makeTO();
-        higer.makeTO();
+        ServiceStation serviceStation = new ServiceStation();
+        serviceStation.addTransport(audi);
+        serviceStation.addTransport(bmw);
+        serviceStation.addTransport(kia);
+        serviceStation.addTransport(hyundai);
+        serviceStation.addTransport(higer);
+        serviceStation.addTransport(volvo);
+        serviceStation.addTransport(paz);
+        serviceStation.addTransport(mercedes);
+        serviceStation.addTransport(renault);
+        serviceStation.addTransport(mercedesBenz);
+        serviceStation.addTransport(scania);
+        serviceStation.addTransport(faw);
+
+        serviceStation.makeTO(audi);
+        serviceStation.service(audi);
+
+        serviceStation.makeTO(higer);
+
+
+
+        ServiceStation.service(higer );
+
+        //faw.serviceStation.makeTO();
+
+
 
         System.out.println(ivanov);
         System.out.println(petrov);

@@ -21,6 +21,11 @@ public class Mechanics <A extends Transport> {
                 transport.getBrand() + " " + transport.getModel());
     }
 
+    public void add(Mechanics mechanics) {
+    }
+    public void makeTO() {
+        System.out.println("ТО транспорта");
+    }
     public String getName() {
         return name;
     }

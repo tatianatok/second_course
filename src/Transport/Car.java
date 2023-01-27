@@ -1,7 +1,4 @@
 package Transport;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 public final class Car extends Transport {
     private BodyType type;
@@ -37,16 +34,6 @@ public final class Car extends Transport {
     }
 
     @Override
-    public void addAutoQueue (){
-        System.out.println(getBrand() + getModel() + " встает в очередь на ТО");
-        }
-
-    @Override
-    public void makeTO(){
-        System.out.println(getBrand() + getModel() + " провести ТО");
-    }
-
-    @Override
     public void printType() {
         if (type == null) {
             System.out.println("Данных по транспортному средству недостаточно.");
@@ -57,9 +44,8 @@ public final class Car extends Transport {
 
     @Override
     public String toString () {
-        return getBrand() + " " + getModel() +
-                ", тип кузова: " + getType() +
-               ", объем двигателя: " + getEngineVolume();
+        return "Автомобиль: " + getBrand() + " " + getModel() +
+                ", объем двигателя: " + getEngineVolume();
     }
 
     @Override
@@ -89,7 +75,18 @@ public final class Car extends Transport {
 
     @Override
     public void checkTransport() {
-        System.out.println(getBrand() + getModel() + " проходит диагностику");
+        System.out.println("Автомобилю: " +getBrand() + " " + getModel() + " проходит диагностику");
+    }
+
+    @Override
+    public void makeTO(){
+        System.out.println("Автомобилю: " + getBrand() + " " + getModel() + " провести ТО"); ;
+    }
+
+    @Override
+    public boolean service() {
+        System.out.println("Автомобилю: " + getBrand() + " " + getModel() + " ТО пройдено");
+        return true;
     }
 }
 

@@ -38,16 +38,6 @@ public class Truck extends Transport {
     }
 
     @Override
-    public void addAutoQueue() {
-        System.out.println(getBrand() + getModel() + " встает в очередь на ТО");
-    }
-
-    @Override
-    public void makeTO(){
-        System.out.println(getBrand() + getModel() + " провести ТО");
-        }
-
-    @Override
     public void printType() {
         if (type == null) {
             System.out.println("Данных по транспортному средству недостаточно.");
@@ -58,8 +48,7 @@ public class Truck extends Transport {
 
     @Override
     public String toString () {
-        return getBrand() + " " + getModel() +
-                ", тип грузовика: " + getType() +
+        return "Грузовик: " + getBrand() + " " + getModel() +
                 ", объем двигателя: " + getEngineVolume();
     }
 
@@ -104,6 +93,17 @@ public class Truck extends Transport {
     @Override
     public int hashCode() {
         return Objects.hash(type);
+    }
+
+    @Override
+    public void makeTO(){
+        System.out.println("Грузовик: " + getBrand() + " " + getModel() + " провести ТО"); ;
+    }
+
+    @Override
+    public boolean service() {
+        System.out.println("Грузовик: " + getBrand() + " " + getModel() + " ТО пройдено");
+        return true;
     }
 }
 

@@ -6,8 +6,8 @@ public abstract class Transport implements Competing {
     private String brand;
     private String model;
     private double engineVolume;
-
     private Driver driver;
+    private final List<Mechanics> mechanics = new ArrayList<>();
 
     public Transport(String brand,
                      String model,
@@ -37,11 +37,10 @@ public abstract class Transport implements Competing {
 
     public abstract void checkTransport();
 
-    List<Mechanics> mechanicsList = new ArrayList<>();
 
-    public abstract void addAutoQueue();
-
-    public abstract void makeTO();
+    public List<Mechanics> getMechanics() {
+        return mechanics;
+    }
 
     public String getBrand() {
         return brand;
@@ -71,4 +70,8 @@ public abstract class Transport implements Competing {
     public void setEngineVolume(double engineVolume) {
         this.engineVolume = engineVolume;
     }
+
+    public abstract void makeTO();
+
+    public abstract boolean service();
 }
