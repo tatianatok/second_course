@@ -1,7 +1,9 @@
 import Transport.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
        public static void main(String[] args) {
@@ -109,6 +111,22 @@ public class Main {
         transportList.add(scania);
         transportList.add(faw);
 
+        Map<Transport, Mechanics> map = new HashMap<>();
+        map.put(audi, first);
+        map.put(bmw, second);
+        map.put(kia, third);
+        map.put(hyundai, third);
+        map.put(volvo, first);
+        map.put(paz, first);
+        map.put(mercedes, third);
+        map.put(higer, second);
+        map.put(renault, second);
+        map.put(mercedesBenz, third);
+        map.put(scania, third);
+        map.put(faw, first);
+
+        System.out.println(map);
+
         System.out.println(audi);
         System.out.println(bmw);
         System.out.println(kia);
@@ -151,13 +169,7 @@ public class Main {
 
         serviceStation.makeTO(higer);
 
-
-
-        ServiceStation.service(higer );
-
-        //faw.serviceStation.makeTO();
-
-
+        ServiceStation.service(higer);
 
         System.out.println(ivanov);
         System.out.println(petrov);
@@ -166,7 +178,6 @@ public class Main {
         bmw.setType(Car.BodyType.SEDAN);
         bmw.printType();
         audi.checkTransport();
-        //higer.checkTransport();
 
         third.makeMaintenance(audi);
         first.repairTransport(mercedesBenz);
