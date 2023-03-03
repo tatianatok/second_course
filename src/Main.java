@@ -1,9 +1,6 @@
 import Transport.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
        public static void main(String[] args) {
@@ -96,6 +93,11 @@ public class Main {
         Mechanics third = new Mechanics(
                  "Механик 3",
                  "Компания 3");
+
+        HashSet<Driver> driver = new HashSet<Driver>();
+        driver.add(ivanov);
+        driver.add(petrov);
+        driver.add(sidorov);
 
         List<Transport> transportList = new ArrayList<>();
         transportList.add(audi);
