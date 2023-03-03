@@ -1,5 +1,4 @@
 package Transport;
-import java.util.Objects;
 
 public class Truck extends Transport {
     private LoadCapacity type;;
@@ -80,19 +79,6 @@ public class Truck extends Transport {
     @Override
     public void getMaxSpeed() {
         System.out.println("Максимальная скорость грузовика: ");
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Truck truck = (Truck) o;
-        return Objects.equals(type, truck.type);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(type);
     }
 
     @Override

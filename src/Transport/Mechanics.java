@@ -43,6 +43,11 @@ public class Mechanics <A extends Transport> {
     }
 
     @Override
+    public String toString (){
+        return ", Имя механика: " + getName() + ", " + "Компания: " + getNameCompany();
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

@@ -1,6 +1,6 @@
 package Transport;
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.*;
 
 public abstract class Transport implements Competing {
     private String brand;
@@ -8,6 +8,7 @@ public abstract class Transport implements Competing {
     private double engineVolume;
     private Driver driver;
     private final List<Mechanics> mechanics = new ArrayList<>();
+    Map<Transport, Mechanics> map = new HashMap<>();
 
     public Transport(String brand,
                      String model,
@@ -38,8 +39,9 @@ public abstract class Transport implements Competing {
     public abstract void checkTransport();
 
 
-    public List<Mechanics> getMechanics() {
-        return mechanics;
+    public void getMechanics() {
+        System.out.println("Список механиков у " + getBrand() + " " + getModel() + ": ");
+        System.out.printf(map.get(this).getName() + " " + map.get(this).getNameCompany());
     }
 
     public String getBrand() {
@@ -74,4 +76,18 @@ public abstract class Transport implements Competing {
     public abstract void makeTO();
 
     public abstract boolean service();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Transport transport = (Transport) o;
+        return Double.compare(transport.engineVolume, engineVolume) == 0 && brand.equals(transport.brand) &&
+                model.equals(transport.model) && driver.equals(transport.driver) && map.equals(transport.map);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, model, engineVolume, driver, map);
+    }
 }
