@@ -99,6 +99,11 @@ public class Main {
         driver.add(petrov);
         driver.add(sidorov);
 
+        Iterator iterator = driver.iterator();
+        while (iterator.hasNext()) {
+         System.out.println(iterator.next());
+        }
+
         List<Transport> transportList = new ArrayList<>();
         transportList.add(audi);
         transportList.add(bmw);
